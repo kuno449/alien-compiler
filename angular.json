@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "alien-compiler"
+    }
+  },
+  "defaultProject": "alien-compiler",
+  "cli": {
+    "analytics": false
+  }
 }
