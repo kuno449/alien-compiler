@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CompilerMainComponent } from './compiler-main/compiler-main.component';
+import { CompilerInputComponent } from './compiler-input/compiler-input.component';
+import { CompilerResultComponent } from './compiler-result/compiler-result.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CompilerMainComponent,
+    CompilerInputComponent,
+    CompilerResultComponent
   ],
   imports: [
     BrowserModule,

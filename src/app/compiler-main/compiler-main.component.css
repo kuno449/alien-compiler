@@ -1,0 +1,7 @@
+.flex-display {
+  display: flex;
+}
+
+.is-half {
+  width: 50%;
+}
