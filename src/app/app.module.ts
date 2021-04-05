@@ -1,11 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { CompilerMainComponent } from './compiler-main/compiler-main.component';
-import { CompilerInputComponent } from './compiler-input/compiler-input.component';
-import { CompilerResultComponent } from './compiler-result/compiler-result.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {CompilerMainComponent} from './compiler-main/compiler-main.component';
+import {CompilerInputComponent} from './compiler-input/compiler-input.component';
+import {CompilerResultComponent} from './compiler-result/compiler-result.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { CompilerResultComponent } from './compiler-result/compiler-result.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

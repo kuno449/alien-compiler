@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CompileAPIService} from '../service/compile-api.service';
 
 @Component({
   selector: 'app-compiler-result',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompilerResultComponent implements OnInit {
 
-  constructor() { }
+  constructor(public compileApiService: CompileAPIService) { }
 
   ngOnInit(): void {
   }
