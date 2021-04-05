@@ -1,0 +1,8 @@
+.result-code-frame {
+  display: inline-grid;
+  width: 100%;
+}
+
+.result-text-area {
+  width: 100%;
+}

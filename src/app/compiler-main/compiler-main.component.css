@@ -5,3 +5,15 @@
 .is-half {
   width: 50%;
 }
+
+.btn-execute {
+  min-width: 80px;
+  margin: 0 5px 0 12px;
+  height: 80px;
+  border-radius: 50%;
+  padding: unset;
+  border: none;
+  color: white;
+  background: steelblue;
+  font-weight: bold;
+}

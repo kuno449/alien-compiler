@@ -10,6 +10,6 @@ export class CompilerInputComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
 }
