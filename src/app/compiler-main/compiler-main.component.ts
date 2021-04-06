@@ -8,8 +8,10 @@ import {CompileAPIService} from '../service/compile-api.service';
 })
 export class CompilerMainComponent {
 
-  public scrHeight: number;
-  public scrWidth: number;
+  public readonly HEADER_HEIGHT = 235;
+
+  public panelHeight: number;
+  public panelWidth: number;
 
   constructor(public compileService: CompileAPIService) {
     this.getScreenSize();
@@ -21,7 +23,7 @@ export class CompilerMainComponent {
 
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?) {
-    this.scrHeight = window.innerHeight;
-    this.scrWidth = window.innerWidth;
+    this.panelHeight = window.innerHeight - this.HEADER_HEIGHT;
+    this.panelWidth = window.innerWidth - this.HEADER_HEIGHT;
   }
 }

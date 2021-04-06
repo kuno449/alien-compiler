@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {CompilerDTO} from '../model/compiler-dto';
 
@@ -12,12 +12,14 @@ export class CompileAPIService {
   public inputCode: string;
   public message: string;
 
+  public isCompiling: boolean = false;
   public readonly LINE_BREAK = '<br><br>';
-  constructor(private httpClient: HttpClient) {
 
-  }
+  constructor(private httpClient: HttpClient) {}
 
   public compileSourceCode() {
+
+    this.isCompiling = true;
 
     this.message = 'File compile started.' + this.LINE_BREAK;
 
@@ -29,14 +31,21 @@ export class CompileAPIService {
     this.httpClient.post<CompilerDTO>(this.API_HOME + '/compile.json', testCode).toPromise().then(result => {
       if (result.compiler_error) {
         console.log('Compile Error::' + result.compiler_error);
-        this.message = this.message + result.compiler_error + this.LINE_BREAK;
+        this.appendMessage(result.compiler_error);
       } else {
         console.log('Message::' + result.program_message);
-        this.message = this.message + result.program_message + this.LINE_BREAK;
+        this.appendMessage(result.program_message);
       }
-      this.message = this.message + 'Received compile result.' + this.LINE_BREAK;
+      this.appendMessage('Received compile result.');
+      this.isCompiling = false;
     }).catch(error => {
-      console.log('Error::' + error.program_message);
+      this.appendMessage(error.message);
+      console.log('Error::' + error.message);
+      this.isCompiling = false;
     });
+  }
+
+  private appendMessage(msg: string) {
+    this.message = this.message + msg + this.LINE_BREAK;
   }
 }

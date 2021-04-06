@@ -8,7 +8,7 @@ import {CompileAPIService} from '../../service/compile-api.service';
 })
 export class CompilerInputComponent {
 
-  @Input('screenHeight') screenHeight: number;
+  @Input('panelHeight') panelHeight: number;
 
   constructor(public compileService: CompileAPIService) { }
 
