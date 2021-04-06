@@ -1,6 +1,6 @@
-<div class="flex-display">
+<div class="main-panel">
 
-  <app-compiler-input class="is-half"
+  <app-compiler-input class="is-desktop-half"
                       [panelHeight]="panelHeight"
   ></app-compiler-input>
 
@@ -10,7 +10,7 @@
           [style.top.px]="(panelHeight / 2) - 15"
   >{{compileService.isCompiling ? 'Compiling' : 'Execute' }}</button>
 
-  <app-compiler-result class="is-half"
+  <app-compiler-result class="is-desktop-half"
                        [panelHeight]="panelHeight"
   ></app-compiler-result>
 </div>

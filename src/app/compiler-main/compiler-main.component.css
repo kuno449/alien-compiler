@@ -1,9 +1,9 @@
-.flex-display {
+.main-panel {
   display: flex;
   height: 100%;
 }
 
-.is-half {
+.is-desktop-half {
   width: 48%;
 }
 
@@ -73,4 +73,20 @@
   background: white;
   border: 1px solid #808080;
   padding-bottom: 10px;
+}
+
+@media only screen and (max-width : 1024px) {
+  .main-panel {
+    flex-direction: column;
+  }
+
+  .is-desktop-half {
+    width: 100%;
+  }
+
+  .btn-execute {
+    top: 0 !important;
+    width: 100px;
+    margin: 10px auto;
+  }
 }
