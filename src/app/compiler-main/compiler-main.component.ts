@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {CompileAPIService} from '../service/compile-api.service';
 
 @Component({
@@ -6,14 +6,13 @@ import {CompileAPIService} from '../service/compile-api.service';
   templateUrl: './compiler-main.component.html',
   styleUrls: ['./compiler-main.component.css']
 })
-export class CompilerMainComponent implements OnInit {
+export class CompilerMainComponent {
 
-  constructor(public compileService: CompileAPIService) { }
+  constructor(public compileService: CompileAPIService) {
 
-  ngOnInit(): void {
   }
 
   compile() {
-    this.compileService.compileSourceCode('a');
+    this.compileService.compileSourceCode();
   }
 }

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {CompileAPIService} from '../service/compile-api.service';
+import {CompileAPIService} from '../../service/compile-api.service';
 
 @Component({
   selector: 'app-compiler-result',
   templateUrl: './compiler-result.component.html',
-  styleUrls: ['./compiler-result.component.css']
+  styleUrls: ['../compiler-main.component.css']
 })
 export class CompilerResultComponent implements OnInit {
 

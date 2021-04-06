@@ -17,3 +17,25 @@
   background: steelblue;
   font-weight: bold;
 }
+
+.code-frame {
+  display: inline-grid;
+  width: 100%;
+}
+
+.label-title {
+  font-size: 1.5rem;
+  font-family: Orbitron;
+  font-weight: 800;
+}
+
+.text-area {
+  width: 100%;
+}
+
+.result-text-label {
+  width: 100%;
+  background: white;
+  height: 800px;
+  border: solid 1px black;
+}
