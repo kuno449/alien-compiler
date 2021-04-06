@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {CompileAPIService} from '../../service/compile-api.service';
 
 @Component({
@@ -7,6 +7,8 @@ import {CompileAPIService} from '../../service/compile-api.service';
   styleUrls: ['../compiler-main.component.css']
 })
 export class CompilerResultComponent implements OnInit {
+
+  @Input('screenHeight') screenHeight: number;
 
   constructor(public compileApiService: CompileAPIService) { }
 

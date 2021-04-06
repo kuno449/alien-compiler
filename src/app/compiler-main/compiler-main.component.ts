@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {CompileAPIService} from '../service/compile-api.service';
 
 @Component({
@@ -8,11 +8,20 @@ import {CompileAPIService} from '../service/compile-api.service';
 })
 export class CompilerMainComponent {
 
-  constructor(public compileService: CompileAPIService) {
+  public scrHeight: number;
+  public scrWidth: number;
 
+  constructor(public compileService: CompileAPIService) {
+    this.getScreenSize();
   }
 
   compile() {
     this.compileService.compileSourceCode();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize(event?) {
+    this.scrHeight = window.innerHeight;
+    this.scrWidth = window.innerWidth;
   }
 }

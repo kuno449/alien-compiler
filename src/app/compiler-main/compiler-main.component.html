@@ -1,6 +1,6 @@
 <div class="flex-display">
-  <app-compiler-input class="is-half"></app-compiler-input>
-  <button class="btn-execute" (click)="compile()">Execute!!</button>
-  <app-compiler-result class="is-half"></app-compiler-result>
+  <app-compiler-input class="is-half" [screenHeight]="scrHeight"></app-compiler-input>
+  <button class="btn-execute" (click)="compile()" [style.top.px]="(scrHeight-230)/2">Execute</button>
+  <app-compiler-result class="is-half" [screenHeight]="scrHeight"></app-compiler-result>
 </div>
 
