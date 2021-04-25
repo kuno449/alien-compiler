@@ -25,7 +25,7 @@ p {
 }
 
 .toolbar {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -41,13 +41,9 @@ p {
   margin: 0 16px;
 }
 
-.toolbar #twitter-logo {
-  height: 40px;
-  margin: 0 16px;
-}
-
-.toolbar #twitter-logo:hover {
-  opacity: 0.8;
+.header {
+  margin: 20px;
+  height: 60px;
 }
 
 .content {
@@ -55,7 +51,8 @@ p {
   display: flex;
   padding: 0 16px;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  margin-right: 20px;
 }
 
 svg.material-icons {
@@ -131,13 +128,6 @@ svg.material-icons:not(:last-child) {
   margin-left: 60px;
 }
 
-svg#rocket {
-  width: 80px;
-  position: absolute;
-  left: -10px;
-  top: -24px;
-}
-
 a,
 a:visited,
 a:hover {
@@ -172,18 +162,6 @@ svg#clouds {
 
   .card.highlight-card span {
     margin-left: 72px;
-  }
-
-  svg#rocket-smoke {
-    right: 120px;
-    transform: rotate(-5deg);
-  }
-}
-
-@media screen and (max-width: 575px) {
-  svg#rocket-smoke {
-    display: none;
-    visibility: hidden;
   }
 }
 
