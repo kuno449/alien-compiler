@@ -14,7 +14,7 @@ export class DatabaseService {
   }
 
   public getAllPosts() {
-    this.http.get('http://alien-code.jp/get-all-posts.php').subscribe((dtos: Array<WpPostDTO>) => {
+    this.http.get('https://alien-code.jp/get-all-posts.php').subscribe((dtos: Array<WpPostDTO>) => {
       dtos.forEach(dto => {
         this.snippets.push({
           postTitle: dto.post_title,
