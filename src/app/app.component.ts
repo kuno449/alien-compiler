@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
+import {DatabaseService} from './service/database.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,12 @@ export class AppComponent {
 
   title = 'alien-compiler';
 
+  constructor(private _router: Router,
+              private dbService: DatabaseService) {
+    dbService.getAllPosts();
+  }
+
   public openAboutPage() {
-    console.log('openAboutPage');
+    this._router.navigate(['about']);
   }
 }

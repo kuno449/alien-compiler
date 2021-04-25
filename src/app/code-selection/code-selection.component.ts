@@ -12,9 +12,8 @@ export class CodeSelectionComponent {
 
   public selectedSnippets: CodeSnippets;
 
-  constructor(public dbService: DatabaseService,
-              private _compileApiService: CompileAPIService) {
-    dbService.getAllPosts();
+  constructor(private _compileApiService: CompileAPIService,
+              public dbService: DatabaseService) {
   }
 
   public changeSelection(event: CodeSnippets) {
